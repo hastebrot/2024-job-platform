@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import { createHashRouter } from "react-router";
-import { CasesPage } from "./pages/CasesPage.tsx";
+import { CandidatesPage } from "./pages/CandidatesPage.tsx";
 import { IndexPage } from "./pages/IndexPage.tsx";
 
 const StorybookPage = lazy(() =>
@@ -11,6 +11,6 @@ const StorybookPage = lazy(() =>
 
 export const router = createHashRouter([
   { path: "/", Component: IndexPage },
-  { path: "/cases", Component: CasesPage },
+  { path: "/candidates", Component: CandidatesPage },
   { path: "/storybook", Component: StorybookPage },
 ]);
