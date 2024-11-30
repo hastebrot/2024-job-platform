@@ -1,8 +1,8 @@
 **initial setup:**
 
 vite frontend tooling (v6)
-- `❯ bun create vite case-app --template react-swc-ts`
-- `❯ cd case-app/`
+- `❯ bun create vite platform-app --template react-swc-ts`
+- `❯ cd sources/platform-app/`
 - `❯ bun install`
 - `❯ bun run dev --port 5678`
 - `❯ open -a safari --url "http://localhost:5678/"`
