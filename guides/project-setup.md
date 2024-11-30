@@ -1,4 +1,4 @@
-**initial setup:**
+## project setup
 
 vite frontend tooling (v6)
 - `❯ bun create vite platform-app --template react-swc-ts`

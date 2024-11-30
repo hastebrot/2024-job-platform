@@ -7,3 +7,8 @@
 - `❯ bun install`
 - `❯ bun run dev --port 5678`
 - `❯ open -a safari --url "http://localhost:5678/"`
+
+**guides:**
+
+- [project-setup](./guides/project-setup.md)
+- [design-case-study](./guides/design-case-study.md)
