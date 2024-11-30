@@ -11,4 +11,5 @@
 **guides:**
 
 - [project-setup](./guides/project-setup.md)
+- [project-item-templates](./guides/project-item-templates.md)
 - [design-case-study](./guides/design-case-study.md)
