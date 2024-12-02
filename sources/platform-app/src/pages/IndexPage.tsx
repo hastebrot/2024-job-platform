@@ -1,3 +1,5 @@
+import { PageLayout } from "./PageLayout";
+
 export const IndexPage = () => {
-  return <div>index page</div>;
+  return <PageLayout>index page</PageLayout>;
 };
