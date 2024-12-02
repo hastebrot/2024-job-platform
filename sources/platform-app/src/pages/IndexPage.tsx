@@ -50,56 +50,83 @@ export const IndexPage = () => {
             </div>
           </div>
         </header>
-        <nav>
-          <span>Personal Information</span>
-          <span>Contract</span>
-          <span>Payroll</span>
-          <span>Time Management</span>
-          <span>Assets</span>
-          <span>Documents</span>
-          <span>Training</span>
-          <span>Finance</span>
+        <nav className="py-[10px] mt-[20px] flex items-center gap-[25px] text-nowrap text-[14px] text-[#4F555F] border-b border-[#D8DAE0]">
+          <span className="relative flex items-center gap-[5px] text-[#20242F] font-semibold text-nowrap">
+            <span className="absolute left-0 right-0 bottom-[-12px] h-[3px] bg-[#20242F]"></span>
+            <icons.User size={16} />
+            Personal Information
+          </span>
+          <span className="flex items-center gap-[5px]">
+            <icons.ClipboardList size={16} />
+            Contract
+          </span>
+          <span className="flex items-center gap-[5px]">
+            <icons.Banknote size={16} />
+            Payroll
+          </span>
+          <span className="flex items-center gap-[5px]">
+            <icons.Clock8 size={16} />
+            Time Management
+          </span>
+          <span className="flex items-center gap-[5px]">
+            <icons.Bolt size={16} />
+            Assets
+          </span>
+          <span className="flex items-center gap-[5px]">
+            <icons.FileText size={16} />
+            Documents
+          </span>
+          <span className="flex items-center gap-[5px]">
+            <icons.BookOpen size={16} />
+            Training
+          </span>
+          <span className="flex items-center gap-[5px]">
+            <icons.Wallet size={16} />
+            Finance
+          </span>
         </nav>
-        <section>
-          <span>Personal Information</span>
-          <span>Full Name</span>
-          <span>Firstname Lastname</span>
-          <span>Gender</span>
-          <span>Male</span>
-          <span>Marital Status</span>
-          <span>Single</span>
-          <span>Religion</span>
-          <span>Muslim</span>
-          <span>Place of Birth</span>
-          <span>City</span>
-          <span>Birthdate</span>
-          <span>01 February 1995</span>
-          <span>Blood Type</span>
-          <span>B</span>
-          <span>Age</span>
-          <span>29</span>
-        </section>
-        <section>
-          <span>Address Information</span>
-          <span>Residential Address</span>
-          <span>1234 Washington Ave., Manchester, Kentucky 12345</span>
-          <span>Notes</span>
-          <span>Add Note</span>
-          <span>Citizen ID Address</span>
-          <span>1234 Ash Dr., San Jose, South Dakota 12345</span>
-          <span>Notes</span>
-          <span>Main entry likely from Ash Drive. Check for a driveway or garage access.</span>
-        </section>
-        <section>
-          <span>Contact Information</span>
-          <span>Personal Contact</span>
-          <span>Phone Number</span>
-          <span>+12-345-678-999</span>
-          <span>Email</span>
-          <span>name@domain.com</span>
-          <span>Other Contact</span>
-          <span>Not Provided</span>
-        </section>
+        <div className="mt-[20px]">
+          <section>
+            <span>Personal Information</span>
+            <span>Full Name</span>
+            <span>Firstname Lastname</span>
+            <span>Gender</span>
+            <span>Male</span>
+            <span>Marital Status</span>
+            <span>Single</span>
+            <span>Religion</span>
+            <span>Muslim</span>
+            <span>Place of Birth</span>
+            <span>City</span>
+            <span>Birthdate</span>
+            <span>01 February 1995</span>
+            <span>Blood Type</span>
+            <span>B</span>
+            <span>Age</span>
+            <span>29</span>
+          </section>
+          <section>
+            <span>Address Information</span>
+            <span>Residential Address</span>
+            <span>1234 Washington Ave., Manchester, Kentucky 12345</span>
+            <span>Notes</span>
+            <span>Add Note</span>
+            <span>Citizen ID Address</span>
+            <span>1234 Ash Dr., San Jose, South Dakota 12345</span>
+            <span>Notes</span>
+            <span>Main entry likely from Ash Drive. Check for a driveway or garage access.</span>
+          </section>
+          <section>
+            <span>Contact Information</span>
+            <span>Personal Contact</span>
+            <span>Phone Number</span>
+            <span>+12-345-678-999</span>
+            <span>Email</span>
+            <span>name@domain.com</span>
+            <span>Other Contact</span>
+            <span>Not Provided</span>
+          </section>
+        </div>
       </div>
     </PageLayout>
   );
