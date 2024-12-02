@@ -59,7 +59,7 @@ const Header = () => {
 
 const NavigationBar = () => {
   return (
-    <div className="w-[62px] bg-[#FFFFFF] flex flex-col items-stretch justify-between">
+    <div className="w-[62px] bg-[#FFFFFF] flex flex-col items-stretch justify-between shadow-md shadow-gray-100">
       <div className="py-[14px] flex flex-col items-center gap-[4px]">
         <div className="flex items-center justify-center size-[36px] rounded-[8px]">
           <icons.Home className="text-[#9096A6]" size={18} />
