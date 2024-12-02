@@ -14,7 +14,7 @@ export const PageLayout = (props: PageLayoutProps) => {
         <Header />
         <div className="grid grid-cols-[auto_1fr_auto]">
           <NavigationBar />
-          <div>{props.children}</div>
+          <main>{props.children}</main>
           <Sidebar />
         </div>
       </div>
@@ -24,7 +24,7 @@ export const PageLayout = (props: PageLayoutProps) => {
 
 const Header = () => {
   return (
-    <div className="h-[56px] px-[20px] flex items-center justify-between bg-[#1D212C] text-[#FFFFFF]">
+    <header className="h-[56px] px-[20px] flex items-center justify-between bg-[#1D212C] text-[#FFFFFF]">
       <div className="flex items-center gap-[14px]">
         <div className="flex items-center">
           <icons.PersonStanding className="text-[#F9D957]" />
@@ -53,13 +53,13 @@ const Header = () => {
           <div className="bg-[#92D4CC] w-full h-full"></div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
 const NavigationBar = () => {
   return (
-    <div className="w-[62px] bg-[#FFFFFF] flex flex-col items-stretch justify-between">
+    <nav className="w-[62px] bg-[#FFFFFF] flex flex-col items-stretch justify-between shadow-md shadow-gray-100">
       <div className="py-[14px] flex flex-col items-center gap-[4px]">
         <div className="flex items-center justify-center size-[36px] rounded-[8px]">
           <icons.Home className="text-[#9096A6]" size={18} />
@@ -100,13 +100,13 @@ const NavigationBar = () => {
           <icons.HelpCircle className="text-[#9096A6]" size={18} />
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
 const Sidebar = () => {
   return (
-    <div className="w-[56px] bg-[#F4F6F9] flex flex-col items-stretch justify-between border-l border-[#D8DAE0]">
+    <nav className="w-[56px] bg-[#F4F6F9] flex flex-col items-stretch justify-between border-l border-[#D8DAE0]">
       <div className="flex flex-col items-center border-b border-[#DBDDE3]">
         <div className="flex items-center justify-center size-[55px]">
           <icons.Plus className="text-[#9096A6]" size={18} />
@@ -130,6 +130,6 @@ const Sidebar = () => {
           <icons.ChevronLeft className="text-[#9096A6]" size={18} />
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
