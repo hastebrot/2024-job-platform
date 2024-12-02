@@ -12,9 +12,10 @@ export const PageLayout = (props: PageLayoutProps) => {
     <div className="grid min-h-dvh">
       <div className="grid grid-rows-[auto_1fr] bg-[#F4F6F9]">
         <Header />
-        <div className="grid grid-cols-[auto_1fr]">
+        <div className="grid grid-cols-[auto_1fr_auto]">
           <NavigationBar />
           <div>{props.children}</div>
+          <Sidebar />
         </div>
       </div>
     </div>
@@ -97,6 +98,36 @@ const NavigationBar = () => {
         </div>
         <div className="flex items-center justify-center size-[36px] rounded-[8px]">
           <icons.HelpCircle className="text-[#9096A6]" size={18} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Sidebar = () => {
+  return (
+    <div className="w-[56px] bg-[#F4F6F9] flex flex-col items-stretch justify-between border-l border-[#D8DAE0]">
+      <div className="flex flex-col items-center border-b border-[#DBDDE3]">
+        <div className="flex items-center justify-center size-[55px]">
+          <icons.Plus className="text-[#9096A6]" size={18} />
+        </div>
+      </div>
+
+      <div className="py-[14px] flex flex-col items-center gap-[4px]">
+        <div className="flex items-center justify-center size-[36px] rounded-[8px]">
+          <icons.ListChecks className="text-[#9096A6]" size={18} />
+        </div>
+        <div className="flex items-center justify-center size-[36px] rounded-[8px]">
+          <icons.FileText className="text-[#9096A6]" size={18} />
+        </div>
+        <div className="flex items-center justify-center size-[36px] rounded-[8px]">
+          <icons.FolderClosed className="text-[#9096A6]" size={18} />
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center border-t border-[#DBDDE3]">
+        <div className="flex items-center justify-center size-[55px]">
+          <icons.ChevronLeft className="text-[#9096A6]" size={18} />
         </div>
       </div>
     </div>
