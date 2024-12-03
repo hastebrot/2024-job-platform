@@ -32,9 +32,9 @@ const Header = () => {
         </div>
         <div className="h-[20px] w-[1px] bg-[#353B4A]"></div>
         <div className="flex items-center gap-[8px]">
-          <span className="text-[14px] font-normal text-[#FFFFFF]">Employee</span>
-          <span className="text-[14px] font-normal text-[#A1A7B9]">/</span>
-          <span className="text-[14px] font-normal text-[#A1A7B9]">Employee Details</span>
+          <span className="text-[13px] font-normal text-[#FFFFFF]">Employee</span>
+          <span className="text-[13px] font-normal text-[#A1A7B9]">/</span>
+          <span className="text-[13px] font-normal text-[#A1A7B9]">Employee Details</span>
         </div>
       </div>
 
@@ -59,7 +59,7 @@ const Header = () => {
 
 const NavigationBar = () => {
   return (
-    <nav className="w-[62px] bg-[#FFFFFF] flex flex-col items-stretch justify-between shadow-md shadow-gray-100">
+    <nav className="w-[62px] bg-[#FFFFFF] flex flex-col items-stretch justify-between shadow-sm shadow-gray-200">
       <div className="py-[14px] flex flex-col items-center gap-[4px]">
         <div className="flex items-center justify-center size-[36px] rounded-[8px]">
           <icons.Home className="text-[#9096A6]" size={18} />
@@ -71,11 +71,11 @@ const NavigationBar = () => {
           <icons.MessageSquare className="text-[#9096A6]" size={18} />
         </div>
         <div className="flex items-center justify-center size-[36px] rounded-[8px]">
-          <icons.Search className="text-[#9096A6]" size={18} />
+          <icons.UserRoundSearch className="text-[#9096A6]" size={18} />
         </div>
         <div className="w-[28px] h-[1px] bg-[#D7D9DF] my-[10px]"></div>
         <div className="flex items-center justify-center size-[36px] rounded-[8px] bg-[#EDF3F7]">
-          <icons.User2 className="text-[#333847]" size={18} />
+          <icons.UserRound className="text-[#333847]" size={18} />
         </div>
         <div className="flex items-center justify-center size-[36px] rounded-[8px]">
           <icons.Clock3 className="text-[#9096A6]" size={18} />
