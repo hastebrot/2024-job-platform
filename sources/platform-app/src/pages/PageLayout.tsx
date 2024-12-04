@@ -49,7 +49,7 @@ const Header = () => {
         <div className="flex items-center justify-center size-[36px] rounded-[8px] bg-[#333847]">
           <icons.Bell className="text-[#FFFFFF]" size={18} />
         </div>
-        <div className="ml-[2px] flex items-center justify-center size-[36px] rounded-full bg-[#FFFFFF] border-[2px] border-[#FFFFFF] overflow-clip">
+        <div className="ml-[2px] flex items-center justify-center size-[36px] rounded-full bg-[#FFFFFF] border-[1px] border-[#FFFFFF] overflow-clip">
           <div className="bg-[#92D4CC] w-full h-full"></div>
         </div>
       </div>
