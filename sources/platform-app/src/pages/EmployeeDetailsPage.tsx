@@ -2,8 +2,16 @@ import { icons } from "../helpers/lucide";
 import { PageLayout } from "./PageLayout";
 
 export const EmployeeDetailsPage = () => {
+  const headerLeft = (
+    <div className="flex items-center gap-[8px]">
+      <span className="text-[13px] font-normal text-[#FFFFFF]">Employee</span>
+      <span className="text-[13px] font-normal text-[#A1A7B9]">/</span>
+      <span className="text-[13px] font-normal text-[#A1A7B9]">Employee Details</span>
+    </div>
+  );
+
   return (
-    <PageLayout>
+    <PageLayout headerLeft={headerLeft}>
       <div className="px-[35px] py-[25px]">
         <header className="flex items-center gap-[25px]">
           <div className="flex items-center gap-[14px]">

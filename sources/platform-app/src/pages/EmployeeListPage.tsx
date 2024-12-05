@@ -6,13 +6,18 @@ import { range } from "../helpers/utils";
 import { PageLayout } from "./PageLayout";
 
 export const EmployeeListPage = () => {
+  const headerLeft = (
+    <div className="flex items-center gap-[8px]">
+      <span className="text-[13px] font-normal text-[#FFFFFF]">Employee</span>
+    </div>
+  );
   useEffect(() => {
     const employee = randomEmployee();
     console.log({ employee });
   });
 
   return (
-    <PageLayout>
+    <PageLayout headerLeft={headerLeft}>
       <div className="px-[35px] py-[25px]">
         <header className="flex items-center gap-[25px] justify-between">
           <div className="font-semibold text-[20px] tracking-[2%]">Employee</div>
