@@ -3,6 +3,7 @@ import { usePageTitle } from "../helpers/react";
 
 export type PageLayoutProps = {
   children?: React.ReactNode;
+  headerLeft?: React.ReactNode;
 };
 
 export const PageLayout = (props: PageLayoutProps) => {
@@ -11,7 +12,7 @@ export const PageLayout = (props: PageLayoutProps) => {
   return (
     <div className="grid min-h-dvh">
       <div className="grid grid-rows-[auto_1fr] bg-[#F4F6F9]">
-        <Header />
+        <Header headerLeft={props.headerLeft} />
         <div className="grid grid-cols-[auto_1fr_auto]">
           <NavigationBar />
           <main>{props.children}</main>
@@ -22,7 +23,11 @@ export const PageLayout = (props: PageLayoutProps) => {
   );
 };
 
-const Header = () => {
+type HeaderProps = {
+  headerLeft?: React.ReactNode;
+};
+
+const Header = (props: HeaderProps) => {
   return (
     <header className="h-[56px] px-[20px] flex items-center justify-between bg-[#1D212C] text-[#FFFFFF]">
       <div className="flex items-center gap-[14px]">
@@ -31,11 +36,7 @@ const Header = () => {
           <span className="text-[20px] font-semibold text-[#FFFFFF]">tiimi</span>
         </div>
         <div className="h-[20px] w-[1px] bg-[#353B4A]"></div>
-        <div className="flex items-center gap-[8px]">
-          <span className="text-[13px] font-normal text-[#FFFFFF]">Employee</span>
-          <span className="text-[13px] font-normal text-[#A1A7B9]">/</span>
-          <span className="text-[13px] font-normal text-[#A1A7B9]">Employee Details</span>
-        </div>
+        {props.headerLeft && props.headerLeft}
       </div>
 
       <div className="flex items-center gap-[12px]">
