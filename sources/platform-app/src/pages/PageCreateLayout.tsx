@@ -10,11 +10,12 @@ export const PageCreateLayout = (props: PageLayoutProps) => {
 
   return (
     <div className="grid min-h-dvh">
-      <div className="grid grid-rows-[auto_1fr] bg-[#F4F6F9]">
+      <div className="grid grid-rows-[auto_1fr_auto] bg-[#FFFFFF]">
         <Header />
         <div className="grid grid-cols-[1fr]">
           <main>{props.children}</main>
         </div>
+        <Footer />
       </div>
     </div>
   );
@@ -22,35 +23,60 @@ export const PageCreateLayout = (props: PageLayoutProps) => {
 
 const Header = () => {
   return (
-    <header className="h-[56px] px-[20px] flex items-center justify-between bg-[#1D212C] text-[#FFFFFF]">
-      <div className="flex items-center gap-[14px]">
+    <header className="h-[56px] px-[35px] flex items-center justify-between bg-[#FFFFFF] text-[#1D212C] border-b border-[#DDDFE3]">
+      <div className="flex items-center gap-[20px]">
         <div className="flex items-center">
-          <icons.PersonStanding className="text-[#F9D957]" />
-          <span className="text-[20px] font-semibold text-[#FFFFFF]">tiimi</span>
+          <div className="shrink-0 flex items-center justify-center size-[36px] rounded-full border border-[#DADCE0] bg-[#FFFFFF]">
+            <icons.ArrowLeft className="text-[#5A5F69]" size={18} />
+          </div>
         </div>
-        <div className="h-[20px] w-[1px] bg-[#353B4A]"></div>
-        <div className="flex items-center gap-[8px]">
-          <span className="text-[13px] font-normal text-[#FFFFFF]">Employee</span>
-          <span className="text-[13px] font-normal text-[#A1A7B9]">/</span>
-          <span className="text-[13px] font-normal text-[#A1A7B9]">Employee Details</span>
+        <div className="flex items-center gap-[14px]">
+          <div className="flex items-center">
+            <icons.PersonStanding className="text-[#F9D957]" />
+            <span className="text-[20px] font-semibold text-[#1D212C]">tiimi</span>
+          </div>
+          <div className="h-[20px] w-[1px] bg-[#DDDFE3]"></div>
+          <div>
+            <span className="font-semibold text-[16px] text-[#1D212C]">Create Employee</span>
+          </div>
         </div>
       </div>
 
       <div className="flex items-center gap-[12px]">
-        <div className="flex items-center justify-center size-[36px] rounded-[8px] bg-[#F9D957]">
-          <icons.Plus className="text-[#1D212C]" size={18} />
+        <div className="shrink-0 flex items-center justify-center h-[36px] px-[14px] gap-[7px] rounded-[8px] border border-[#DADCE0] bg-[#FFFFFF]">
+          <icons.SquareArrowOutUpRight className="text-[#1D212C]" size={18} />
+          <span className="font-medium text-[#1D212C] text-nowrap text-[13px]">Preview</span>
         </div>
-        <div className="h-[20px] w-[1px] bg-[#353B4A]"></div>
+        <div className="shrink-0 flex items-center justify-center size-[36px] rounded-[8px] border border-[#DADCE0] bg-[#FFFFFF]">
+          <icons.Clock7 className="text-[#1D212C]" size={18} />
+        </div>
+        <div className="h-[20px] w-[1px] bg-[#DDDFE3]"></div>
         <div className="flex items-center justify-center size-[36px] rounded-[8px] bg-[#333847]">
-          <icons.Search className="text-[#FFFFFF]" size={18} />
-        </div>
-        <div className="flex items-center justify-center size-[36px] rounded-[8px] bg-[#333847]">
-          <icons.Bell className="text-[#FFFFFF]" size={18} />
-        </div>
-        <div className="ml-[2px] flex items-center justify-center size-[36px] rounded-full bg-[#FFFFFF] border-[1px] border-[#FFFFFF] overflow-clip">
-          <div className="bg-[#92D4CC] w-full h-full"></div>
+          <icons.CircleHelp className="text-[#FFFFFF]" size={18} />
         </div>
       </div>
     </header>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer className="h-[62px] px-[35px] flex items-center justify-between bg-[#FFFFFF] text-[#1D212C] border-t border-[#DDDFE3]">
+      <div className="flex items-center gap-[10px]">
+        <div className="shrink-0 flex items-center justify-center h-[36px] px-[14px] gap-[7px] rounded-[8px]">
+          <span className="font-normal text-[#1D212C] text-nowrap text-[13px]">Cancel</span>
+        </div>
+      </div>
+
+      <div className="flex items-center gap-[10px]">
+        <div className="shrink-0 flex items-center justify-center size-[36px] rounded-[8px] border border-[#DADCE0] bg-[#FFFFFF]">
+          <icons.ArrowLeft className="text-[#1D212C]" size={18} />
+        </div>
+        <div className="shrink-0 flex items-center justify-center h-[36px] px-[14px] gap-[7px] rounded-[8px] bg-[#356966]">
+          <span className="font-normal text-[#FFFFFF] text-nowrap text-[13px]">Continue</span>
+          <icons.ArrowRight className="text-[#FFFFFF]" size={18} />
+        </div>
+      </div>
+    </footer>
   );
 };
