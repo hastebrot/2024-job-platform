@@ -10,13 +10,14 @@ vite frontend tooling (v6)
 - more: https://bun.sh/guides/ecosystem/vite
 - more: https://vite.dev/blog/announcing-vite6.html
 
+react (v19)
+- `❯ bun add -d react@^19.0.0 react-dom@^19.0.0`
+- `❯ bun add -d @types/react@^19.0.0 @types/react-dom@^19.0.0`
+- more: https://react.dev/blog/2024/12/05/react-19
+
 tailwind css (v4)
 - `❯ bun add -d tailwindcss@next @tailwindcss/vite@next`
 - more: https://tailwindcss.com/docs/v4-beta#installing-with-vite
-
-lucide react icons
-- `❯ bun add -d lucide-react`
-- more: https://lucide.dev/icons/
 
 react-router library and framework (v7)
 - `❯ bun add -d react-router`
@@ -29,6 +30,10 @@ react aria components
 clsx helper
 - `❯ bun add -d clsx`
 - more: https://github.com/lukeed/clsx
+
+lucide react icons
+- `❯ bun add -d lucide-react`
+- more: https://lucide.dev/icons/
 
 zod schema validation
 - `❯ bun add -d zod`

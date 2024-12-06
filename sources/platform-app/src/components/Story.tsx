@@ -121,10 +121,10 @@ export const StoryState = ({ children, ...props }: StoryStateProps) => {
   }, [ref.current]);
 
   return (
-    <StoryStateContext.Provider value={{ ...props }}>
+    <StoryStateContext value={{ ...props }}>
       <div ref={ref} className="[display:inherit]">
         {children}
       </div>
-    </StoryStateContext.Provider>
+    </StoryStateContext>
   );
 };
