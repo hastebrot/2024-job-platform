@@ -13,9 +13,11 @@ export const PageCreateLayout = (props: PageLayoutProps) => {
     <div className="grid min-h-dvh">
       <div className="grid grid-rows-[auto_1fr_auto] bg-[#FFFFFF]">
         <Header headerLeft={props.headerLeft} />
-        <div className="grid grid-cols-[1fr]">
-          <main>{props.children}</main>
-        </div>
+        <Viewport>
+          <div className="grid grid-cols-[1fr]">
+            <main>{props.children}</main>
+          </div>
+        </Viewport>
         <Footer />
       </div>
     </div>
@@ -81,5 +83,17 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+  );
+};
+
+export type ViewportProps = {
+  children?: React.ReactNode;
+};
+
+export const Viewport = (props: ViewportProps) => {
+  return (
+    <div className="grid relative overflow-auto">
+      <div className="grid absolute inset-0">{props.children}</div>
+    </div>
   );
 };
