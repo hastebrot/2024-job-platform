@@ -3,6 +3,7 @@ import { usePageTitle } from "../helpers/react";
 
 export type PageLayoutProps = {
   children?: React.ReactNode;
+  headerLeft?: React.ReactNode;
 };
 
 export const PageCreateLayout = (props: PageLayoutProps) => {
@@ -11,17 +12,23 @@ export const PageCreateLayout = (props: PageLayoutProps) => {
   return (
     <div className="grid min-h-dvh">
       <div className="grid grid-rows-[auto_1fr_auto] bg-[#FFFFFF]">
-        <Header />
-        <div className="grid grid-cols-[1fr]">
-          <main>{props.children}</main>
-        </div>
+        <Header headerLeft={props.headerLeft} />
+        <Viewport>
+          <div className="grid grid-cols-[1fr]">
+            <main>{props.children}</main>
+          </div>
+        </Viewport>
         <Footer />
       </div>
     </div>
   );
 };
 
-const Header = () => {
+type HeaderProps = {
+  headerLeft?: React.ReactNode;
+};
+
+const Header = (props: HeaderProps) => {
   return (
     <header className="h-[56px] px-[35px] flex items-center justify-between bg-[#FFFFFF] text-[#1D212C] border-b border-[#DDDFE3]">
       <div className="flex items-center gap-[20px]">
@@ -36,9 +43,7 @@ const Header = () => {
             <span className="text-[20px] font-semibold text-[#1D212C]">tiimi</span>
           </div>
           <div className="h-[20px] w-[1px] bg-[#DDDFE3]"></div>
-          <div>
-            <span className="font-semibold text-[16px] text-[#1D212C]">Create Employee</span>
-          </div>
+          {props.headerLeft && props.headerLeft}
         </div>
       </div>
 
@@ -78,5 +83,17 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+  );
+};
+
+export type ViewportProps = {
+  children?: React.ReactNode;
+};
+
+export const Viewport = (props: ViewportProps) => {
+  return (
+    <div className="grid relative overflow-auto">
+      <div className="grid absolute inset-0">{props.children}</div>
+    </div>
   );
 };
