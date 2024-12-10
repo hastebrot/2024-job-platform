@@ -8,7 +8,33 @@ import { PageLayout } from "./PageLayout";
 export const EmployeeListPage = () => {
   const headerLeft = (
     <div className="flex items-center gap-[8px]">
-      <span className="text-[13px] font-normal text-[#FFFFFF]">Employee</span>
+      <span className="text-[18px] font-semibold text-[#FFFFFF]">People</span>
+    </div>
+  );
+  const headerCenter = (
+    <div className="flex items-center gap-[4px]">
+      <div className="flex items-center h-[34px] rounded-[8px] gap-[4px] px-[14px] bg-[#333847]">
+        <span className="text-[13px] font-medium text-[#FFFFFF]">Employees</span>
+        <div className="ml-[2px] mr-[-4px] text-[11px] py-[2px] px-[6px] rounded-[4px]">3</div>
+      </div>
+      <div className="flex items-center h-[34px] rounded-[8px] gap-[4px] px-[14px]">
+        <span className="text-[13px] font-normal text-[#989EAD]">Contracts</span>
+        <div className="ml-[2px] mr-[-4px] bg-[#E64B0C] text-[#FFFFFF] text-[11px] py-[2px] px-[6px] rounded-[4px]">
+          51
+        </div>
+      </div>
+      <div className="flex items-center h-[34px] rounded-[8px] gap-[4px] px-[14px]">
+        <span className="text-[13px] font-normal text-[#989EAD]">Departments</span>
+        <div className="ml-[2px] mr-[-4px] bg-[#E64B0C] text-[#FFFFFF] text-[11px] py-[2px] px-[6px] rounded-[4px]">
+          3
+        </div>
+      </div>
+      <div className="flex items-center h-[34px] rounded-[8px] gap-[4px] px-[14px]">
+        <span className="text-[13px] font-normal text-[#989EAD]">Manpower Planning</span>
+      </div>
+      <div className="flex items-center h-[34px] rounded-[8px] gap-[4px] px-[14px]">
+        <span className="text-[13px] font-normal text-[#989EAD]">Organization Structure</span>
+      </div>
     </div>
   );
   useEffect(() => {
@@ -17,10 +43,10 @@ export const EmployeeListPage = () => {
   });
 
   return (
-    <PageLayout headerLeft={headerLeft}>
+    <PageLayout headerLeft={headerLeft} headerCenter={headerCenter}>
       <div className="px-[35px] py-[25px]">
         <header className="flex items-center gap-[25px] justify-between">
-          <div className="font-semibold text-[20px] tracking-[2%]">Employee</div>
+          <div className="font-semibold text-[20px] tracking-[2%]">Employees</div>
           <div className="flex items-center gap-[10px]">
             <div className="shrink-0 flex items-center justify-center h-[36px] px-[14px] gap-[7px] rounded-[8px] border border-[#DADCE0] bg-[#FFFFFF]">
               <icons.LogIn className="text-[#1D212C] rotate-180" size={18} />
