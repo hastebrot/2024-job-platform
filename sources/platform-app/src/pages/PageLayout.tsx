@@ -4,6 +4,7 @@ import { usePageTitle } from "../helpers/react";
 export type PageLayoutProps = {
   children?: React.ReactNode;
   headerLeft?: React.ReactNode;
+  headerCenter?: React.ReactNode;
 };
 
 export const PageLayout = (props: PageLayoutProps) => {
@@ -12,7 +13,7 @@ export const PageLayout = (props: PageLayoutProps) => {
   return (
     <div className="grid min-h-dvh">
       <div className="grid grid-rows-[auto_1fr] bg-[#F4F6F9]">
-        <Header headerLeft={props.headerLeft} />
+        <Header slotLeft={props.headerLeft} slotCenter={props.headerCenter} />
         <div className="grid grid-cols-[auto_1fr_auto]">
           <NavigationBar />
           <main>{props.children}</main>
@@ -24,7 +25,8 @@ export const PageLayout = (props: PageLayoutProps) => {
 };
 
 type HeaderProps = {
-  headerLeft?: React.ReactNode;
+  slotLeft?: React.ReactNode;
+  slotCenter?: React.ReactNode;
 };
 
 const Header = (props: HeaderProps) => {
@@ -36,8 +38,10 @@ const Header = (props: HeaderProps) => {
           <span className="text-[20px] font-semibold text-[#FFFFFF]">tiimi</span>
         </div>
         <div className="h-[20px] w-[1px] bg-[#353B4A]"></div>
-        {props.headerLeft && props.headerLeft}
+        {props.slotLeft && props.slotLeft}
       </div>
+
+      {props.slotCenter && props.slotCenter}
 
       <div className="flex items-center gap-[12px]">
         <div className="flex items-center justify-center size-[36px] rounded-[8px] bg-[#F9D957]">

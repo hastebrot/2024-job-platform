@@ -4,7 +4,7 @@ import { PageLayout } from "./PageLayout";
 export const EmployeeDetailsPage = () => {
   const headerLeft = (
     <div className="flex items-center gap-[8px]">
-      <span className="text-[13px] font-normal text-[#FFFFFF]">Employee</span>
+      <span className="text-[13px] font-normal text-[#FFFFFF]">Employees</span>
       <span className="text-[13px] font-normal text-[#A1A7B9]">/</span>
       <span className="text-[13px] font-normal text-[#A1A7B9]">Employee Details</span>
     </div>
@@ -32,11 +32,11 @@ export const EmployeeDetailsPage = () => {
           <div className="h-[32px] w-[1px] bg-[#DADCE0]"></div>
           <div className="grid grid-rows-[auto_auto] grid-flow-col gap-x-[28px] gap-y-[10px] text-[13px] leading-none">
             <span className="text-nowrap text-[#4F555F]">Last Clocked In</span>
-            <span className="text-nowrap font-semibold">A few seconds ago</span>
+            <span className="text-nowrap font-medium">A few seconds ago</span>
             <span className="text-nowrap text-[#4F555F]">Last Messaged</span>
-            <span className="text-nowrap font-semibold">2 days ago</span>
+            <span className="text-nowrap font-medium">2 days ago</span>
             <span className="text-nowrap text-[#4F555F]">Employee ID</span>
-            <span className="text-nowrap font-semibold">#EMP7</span>
+            <span className="text-nowrap font-medium">#EMP7</span>
           </div>
           <div className="ml-auto flex items-center gap-[14px]">
             <div className="flex items-center gap-[7px]">
@@ -157,7 +157,7 @@ export const EmployeeDetailsPage = () => {
                 <span className="text-[#4F555F] text-[12px]">Residential Address</span>
                 <span>1234 Washington Ave., Manchester, Kentucky 12345</span>
                 <span className="text-[#4F555F] text-[12px]"></span>
-                <span className="underline underline-offset-[3px] font-semibold flex items-center gap-[2px]">
+                <span className="underline underline-offset-[3px] font-medium flex items-center gap-[2px]">
                   View on Map
                   <icons.ChevronRight className="text-[#050915]" size={16} />
                 </span>
@@ -175,7 +175,7 @@ export const EmployeeDetailsPage = () => {
                 <span className="text-[#4F555F] text-[12px]">Citizen ID Address</span>
                 <span>1234 Ash Dr., San Jose, South Dakota 12345</span>
                 <span className="text-[#4F555F] text-[12px]"></span>
-                <span className="underline underline-offset-[3px] font-semibold flex items-center gap-[2px]">
+                <span className="underline underline-offset-[3px] font-medium flex items-center gap-[2px]">
                   View on Map
                   <icons.ChevronRight className="text-[#050915]" size={16} />
                 </span>
@@ -239,7 +239,7 @@ export const EmployeeDetailsPage = () => {
                 <span className="text-[#4F555F] text-[12px]">Employment Status</span>
                 <span>Fulltime</span>
               </div>
-              <div className="text-[14px] py-[20px] pb-0 underline underline-offset-[3px] font-semibold flex items-center gap-[2px]">
+              <div className="text-[14px] py-[20px] pb-0 underline underline-offset-[3px] font-medium flex items-center gap-[2px]">
                 View contract
                 <icons.ChevronRight className="text-[#050915]" size={16} />
               </div>
