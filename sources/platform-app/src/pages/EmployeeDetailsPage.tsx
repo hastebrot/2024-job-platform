@@ -164,7 +164,7 @@ export const EmployeeDetailsPage = () => {
               </div>
               <div className="text-[14px] leading-none gap-[10px] py-[15px] pt-[5px] grid grid-rows-[auto_auto] grid-cols-[1fr_auto] grid-flow-col">
                 <span className="text-[#4F555F] text-[12px]">Notes</span>
-                <span className="underline underline-offset-2 text-[#356966] font-semibold">
+                <span className="underline underline-offset-2 text-[#356966] font-medium">
                   Add Note
                 </span>
                 <span className="text-[#4F555F] text-[12px]"></span>

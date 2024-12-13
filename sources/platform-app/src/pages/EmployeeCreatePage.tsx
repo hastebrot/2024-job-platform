@@ -129,23 +129,29 @@ export const EmployeeCreatePage = () => {
             </div>
             <div className="mt-[22px] font-medium text-[13px] text-[#6C717A]">Skills</div>
             <div className="mt-[7px] border border-[#DDDFE3] rounded-[6px] p-[12px] pb-[36px] flex flex-wrap gap-[7px]">
-              <span className="inline-flex items-center h-[24px] bg-[#F2F6EE] rounded-full px-[10px] text-[13px]">
+              <span className="inline-flex items-center h-[24px] bg-[#F2F6EE] rounded-full px-[10px] gap-[8px] text-[13px]">
                 Analytical Thinking
+                <icons.X className="text-[#6C717A] mr-[-2px]" size={18} />
               </span>
-              <span className="inline-flex items-center h-[24px] bg-[#F2F6EE] rounded-full px-[10px] text-[13px]">
+              <span className="inline-flex items-center h-[24px] bg-[#F2F6EE] rounded-full px-[10px] gap-[8px] text-[13px]">
                 Communication
+                <icons.X className="text-[#6C717A] mr-[-2px]" size={18} />
               </span>
-              <span className="inline-flex items-center h-[24px] bg-[#F2F6EE] rounded-full px-[10px] text-[13px]">
+              <span className="inline-flex items-center h-[24px] bg-[#F2F6EE] rounded-full px-[10px] gap-[8px] text-[13px]">
                 Data Analysis
+                <icons.X className="text-[#6C717A] mr-[-2px]" size={18} />
               </span>
-              <span className="inline-flex items-center h-[24px] bg-[#F2F6EE] rounded-full px-[10px] text-[13px]">
+              <span className="inline-flex items-center h-[24px] bg-[#F2F6EE] rounded-full px-[10px] gap-[8px] text-[13px]">
                 Project Management
+                <icons.X className="text-[#6C717A] mr-[-2px]" size={18} />
               </span>
-              <span className="inline-flex items-center h-[24px] bg-[#F2F6EE] rounded-full px-[10px] text-[13px]">
+              <span className="inline-flex items-center h-[24px] bg-[#F2F6EE] rounded-full px-[10px] gap-[8px] text-[13px]">
                 Innovation
+                <icons.X className="text-[#6C717A] mr-[-2px]" size={18} />
               </span>
-              <span className="inline-flex items-center h-[24px] bg-[#F2F6EE] rounded-full px-[10px] text-[13px]">
+              <span className="inline-flex items-center h-[24px] bg-[#F2F6EE] rounded-full px-[10px] gap-[8px] text-[13px]">
                 Organization
+                <icons.X className="text-[#6C717A] mr-[-2px]" size={18} />
               </span>
             </div>
           </section>
