@@ -13,28 +13,28 @@ export const EmployeeCreatePage = () => {
       <div className="px-[35px] py-[25px] grid grid-cols-[1fr_2fr_1fr] gap-[14px] mr-[10%]">
         <nav className="flex flex-col gap-[15px]">
           <div className="flex items-center gap-[14px]">
-            <div className="size-[18px] rounded-full bg-[#678E48] flex items-center justify-center">
+            <div className="shrink-0 size-[18px] rounded-full bg-[#678E48] flex items-center justify-center">
               <icons.Check className="text-[#FFFFFF]" size={10} strokeWidth={4} />
             </div>
             <span className="font-medium text-[13px]">Job Details</span>
           </div>
           <div className="flex items-center gap-[14px]">
-            <div className="relative size-[18px] rounded-full bg-[#F2F6EE] flex items-center justify-center">
+            <div className="shrink-0 relative size-[18px] rounded-full bg-[#F2F6EE] flex items-center justify-center">
               <div className="absolute inset-[-4px] border-[2px] border-[#315F5C] rounded-full"></div>
               <span className="font-semibold text-[#356966] text-[11px]">2</span>
             </div>
             <span className="font-medium text-[13px]">Job Requirements</span>
           </div>
           <div className="flex items-center gap-[14px]">
-            <div className="size-[18px] rounded-full bg-[#E9EDF1] flex items-center justify-center"></div>
+            <div className="shrink-0 size-[18px] rounded-full bg-[#E9EDF1] flex items-center justify-center"></div>
             <span className="text-[#6C717A] text-[13px]">Hiring Stage</span>
           </div>
           <div className="flex items-center gap-[14px]">
-            <div className="size-[18px] rounded-full bg-[#E9EDF1] flex items-center justify-center"></div>
+            <div className="shrink-0 size-[18px] rounded-full bg-[#E9EDF1] flex items-center justify-center"></div>
             <span className="text-[#6C717A] text-[13px]">Score Card</span>
           </div>
           <div className="flex items-center gap-[14px]">
-            <div className="size-[18px] rounded-full bg-[#E9EDF1] flex items-center justify-center"></div>
+            <div className="shrink-0 size-[18px] rounded-full bg-[#E9EDF1] flex items-center justify-center"></div>
             <span className="text-[#6C717A] text-[13px]">Application Form</span>
           </div>
         </nav>
