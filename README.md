@@ -1,5 +1,8 @@
 # 2024-job-platform
 
+> [!NOTE]
+> This project is in a very early stage of development.
+
 **usage:**
 
 - `❯ git clone https://github.com/hastebrot/2024-job-platform/`
