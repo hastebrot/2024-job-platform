@@ -5,7 +5,7 @@ import { PageLayout } from "./PageLayout";
 export const IndexPage = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate("/people/employee-create");
+    navigate("/people/employee-list");
   }, []);
 
   return <PageLayout>index page</PageLayout>;
