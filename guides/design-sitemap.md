@@ -1,0 +1,64 @@
+## design sitemap
+
+- (1) home
+  - (1.1) dashboard
+    - recruitment dashboard
+    - HR manager dashboard
+  - (1.2) announcement
+- (2) calendar
+- (3) communication
+  - (3.1) team chat
+  - (3.2) recruitment inbox
+- (4) recruitment
+  - (4.1) jobs
+    - candidates
+      - job application
+      - resume
+      - form submission
+      - interview
+    - job info
+    - calendar
+    - score card
+    - activity
+    - application form
+    - automation
+  - (4.2) candidate
+  - (4.3) career site
+     - job list page
+     - job details page
+     - form application
+- (5) people
+  - (5.1) employee
+    - personal information
+    - contract
+    - payroll
+    - time management
+    - assets
+    - document
+    - training
+    - finance
+  - (5.2) contract
+  - (5.3) department
+  - (5.4) manpower planning
+    - overview
+    - planning history
+    - requisition
+  - (5.5) organization structure
+- (6) time management
+  - (6.1) attendance
+  - (6.2) overtime
+  - (6.3) time off
+  - (6.4) shift schedule
+  - (6.5) work time
+- (7) payroll
+  - (7.1) payroll
+  - (7.2) reimbustment
+  - (7.3) company expenses
+  - (7.4) travel request
+- (8) assets
+  - (8.1) assets
+  - (8.2) document & files
+  - (8.3) task management
+  - (8.4) benefits
+  - (8.5) skills
+  - (8.6) onboarding & offboarding
