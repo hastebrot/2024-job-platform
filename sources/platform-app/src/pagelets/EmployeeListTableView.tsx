@@ -1,6 +1,6 @@
 import { classNames } from "../helpers/clsx";
 import { icons } from "../helpers/lucide";
-import { range } from "../helpers/utils";
+import { pick, range } from "../helpers/utils";
 
 export const EmployeeListTableView = () => {
   return (
@@ -51,26 +51,24 @@ export const EmployeeListTableView = () => {
                 <span className="text-nowrap truncate">Human Resources</span>
               </TableCell>
               <TableCell>
-                {
-                  [
-                    <div className="h-[24px] px-[10px] gap-[4px] rounded-[24px] inline-flex items-center bg-[#9DC082] text-[#FFFFFF]">
-                      <span className="shrink-0 size-[6px] bg-[#FFFFFF] rounded-full"></span>
-                      <span className="text-nowrap text-[12px]">Active</span>
-                    </div>,
-                    <div className="h-[24px] px-[10px] gap-[4px] rounded-[24px] inline-flex items-center bg-[#1D212C] text-[#FFFFFF]">
-                      <span className="shrink-0 size-[6px] bg-[#FFFFFF] rounded-full"></span>
-                      <span className="text-nowrap text-[12px]">Invited</span>
-                    </div>,
-                    <div className="h-[24px] px-[10px] gap-[4px] rounded-[24px] inline-flex items-center bg-[#B7BBC6] text-[#FFFFFF]">
-                      <span className="shrink-0 size-[6px] bg-[#FFFFFF] rounded-full"></span>
-                      <span className="text-nowrap text-[12px]">Inactive</span>
-                    </div>,
-                  ][Math.floor(3 * Math.random())]
-                }
+                {pick(Math.floor(3 * Math.random()), [
+                  <div className="h-[24px] px-[10px] gap-[4px] rounded-[24px] inline-flex items-center bg-[#9DC082] text-[#FFFFFF]">
+                    <span className="shrink-0 size-[6px] bg-[#FFFFFF] rounded-full"></span>
+                    <span className="text-nowrap text-[12px]">Active</span>
+                  </div>,
+                  <div className="h-[24px] px-[10px] gap-[4px] rounded-[24px] inline-flex items-center bg-[#1D212C] text-[#FFFFFF]">
+                    <span className="shrink-0 size-[6px] bg-[#FFFFFF] rounded-full"></span>
+                    <span className="text-nowrap text-[12px]">Invited</span>
+                  </div>,
+                  <div className="h-[24px] px-[10px] gap-[4px] rounded-[24px] inline-flex items-center bg-[#B7BBC6] text-[#FFFFFF]">
+                    <span className="shrink-0 size-[6px] bg-[#FFFFFF] rounded-full"></span>
+                    <span className="text-nowrap text-[12px]">Inactive</span>
+                  </div>,
+                ])}
               </TableCell>
               <TableCell>
                 <span className="text-nowrap border border-[#DFE1E5] text-[#1777BD] rounded-full px-[8px] h-[18px]">
-                  username@mail.com
+                  name@company.com
                 </span>
               </TableCell>
               <TableCell>
