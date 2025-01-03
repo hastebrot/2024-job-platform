@@ -16,7 +16,11 @@ export const PageLayout = (props: PageLayoutProps) => {
         <Header slotLeft={props.headerLeft} slotCenter={props.headerCenter} />
         <div className="grid grid-cols-[auto_1fr_auto]">
           <NavigationBar />
-          <main>{props.children}</main>
+          <Viewport>
+            <div className="grid grid-cols-[1fr]">
+              <main>{props.children}</main>
+            </div>
+          </Viewport>
           <Sidebar />
         </div>
       </div>
@@ -136,5 +140,17 @@ const Sidebar = () => {
         </div>
       </div>
     </nav>
+  );
+};
+
+type ViewportProps = {
+  children?: React.ReactNode;
+};
+
+const Viewport = (props: ViewportProps) => {
+  return (
+    <div className="grid relative overflow-auto">
+      <div className="grid absolute inset-0">{props.children}</div>
+    </div>
   );
 };
