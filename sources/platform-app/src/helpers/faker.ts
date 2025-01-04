@@ -13,7 +13,7 @@ import { pick } from "./utils";
 export type Employee = {
   firstName: string;
   lastName: string;
-  id: string;
+  number: string;
   name: string;
   role: string;
   department: string;
@@ -24,13 +24,13 @@ export type Employee = {
 };
 
 export const randomEmployee = (): Employee => {
-  const id = `EMP${randNumber({ min: 1, max: 100 })}`;
+  const number = `EMP${randNumber({ min: 1, max: 100 })}`;
   const firstName = randFirstName({ withAccents: false });
   const lastName = randLastName({ withAccents: false });
   const name = `${firstName} ${lastName}`;
   const contactEmail = randEmail({
-    firstName: "",
-    lastName,
+    firstName,
+    lastName: "",
     provider: "company",
     suffix: "com",
     nameSeparator: "none",
@@ -42,7 +42,7 @@ export const randomEmployee = (): Employee => {
   const joinedDate = randPastDate().toDateString();
 
   return {
-    id,
+    number,
     firstName,
     lastName,
     name,
