@@ -1,5 +1,5 @@
 import { icons } from "../helpers/lucide";
-import { PageCreateLayout } from "./PageCreateLayout";
+import { PageCreateLayout } from "../layouts/PageCreateLayout";
 
 export const EmployeeCreatePage = () => {
   const headerLeft = (

@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { Employee, randomEmployee } from "../helpers/faker";
 import { icons } from "../helpers/lucide";
 import { range } from "../helpers/utils";
+import { PageLayout } from "../layouts/PageLayout";
 import { EmployeeListCardView } from "../pagelets/EmployeeListCardView";
 import { EmployeeListTableView } from "../pagelets/EmployeeListTableView";
-import { PageLayout } from "./PageLayout";
 
 export const EmployeeListPage = () => {
   const headerLeft = (

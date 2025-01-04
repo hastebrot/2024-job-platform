@@ -1,3 +1,4 @@
+import { DateFormatter } from "@internationalized/date";
 import {
   randEmail,
   randFirstName,
@@ -39,7 +40,7 @@ export const randomEmployee = (): Employee => {
   const role = randJobTitle();
   const department = randJobArea();
   const status = pick(Math.floor(3 * Math.random()), ["active", "invited", "inactive"]);
-  const joinedDate = randPastDate().toDateString();
+  const joinedDate = formatCalendarDate(randPastDate({ years: 10 }));
 
   return {
     number,
@@ -53,4 +54,11 @@ export const randomEmployee = (): Employee => {
     contactTelephone,
     joinedDate,
   };
+};
+
+const formatCalendarDate = (date: Date) => {
+  const dateFormatter = new DateFormatter("en-US", {
+    dateStyle: "medium",
+  });
+  return dateFormatter.format(date);
 };

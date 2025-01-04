@@ -7,7 +7,7 @@ export type EmployeeListCardViewProps = {
 
 export const EmployeeListCardView = (props: EmployeeListCardViewProps) => {
   return (
-    <div className="mt-[20px] grid grid-cols-3 gap-[14px]">
+    <div className="mt-[20px] grid grid-cols-3 xl:grid-cols-4 gap-[14px]">
       {props.employeeList.map((employee, index) => (
         <Card key={index}>
           <header className="m-[18px] mb-0">
@@ -50,7 +50,7 @@ export const EmployeeListCardView = (props: EmployeeListCardViewProps) => {
               <icons.Building className="text-[#1D212C] shrink-0" size={14} />
               <span>{employee.department}</span>
               <>&middot;</>
-              <icons.Timer className="text-[#1D212C] shrink-0" size={14} />
+              <icons.History className="text-[#1D212C] shrink-0" size={14} />
               <span>Fulltime</span>
             </div>
             <div className="text-[14px] leading-none flex items-center gap-[7px]">
@@ -63,10 +63,10 @@ export const EmployeeListCardView = (props: EmployeeListCardViewProps) => {
 
           <footer className="m-[18px] mt-0 flex items-center justify-between">
             <div className="text-[14px]">
-              <span className="text-[#7A7F87]">Joined at</span> {employee.joinedDate}
+              <span className="text-[#7A7F87]">Joined on</span> {employee.joinedDate}
             </div>
             <div className="text-[14px] underline underline-offset-[3px] font-medium flex items-center gap-[2px]">
-              View details
+              <span className="text-nowrap">View details</span>
               <icons.ChevronRight className="text-[#050915]" size={16} />
             </div>
           </footer>
