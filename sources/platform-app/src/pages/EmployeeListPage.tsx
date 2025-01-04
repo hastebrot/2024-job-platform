@@ -1,6 +1,8 @@
-import { useEffect } from "react";
-import { randomEmployee } from "../helpers/faker";
+import { useEffect, useState } from "react";
+import { Employee, randomEmployee } from "../helpers/faker";
 import { icons } from "../helpers/lucide";
+import { range } from "../helpers/utils";
+import { EmployeeListCardView } from "../pagelets/EmployeeListCardView";
 import { EmployeeListTableView } from "../pagelets/EmployeeListTableView";
 import { PageLayout } from "./PageLayout";
 
@@ -36,10 +38,13 @@ export const EmployeeListPage = () => {
       </div>
     </div>
   );
+  const [employeeList, setEmployeeList] = useState<Employee[]>([]);
   useEffect(() => {
-    const employee = randomEmployee();
-    console.log({ employee });
-  });
+    const employeeList = range(0, 10).map(() => {
+      return randomEmployee();
+    });
+    setEmployeeList(employeeList);
+  }, []);
 
   return (
     <PageLayout headerLeft={headerLeft} headerCenter={headerCenter}>
@@ -65,15 +70,15 @@ export const EmployeeListPage = () => {
         </header>
 
         <section className="mt-[10px] flex items-center gap-[7px]">
-          <div className="h-[24px] px-[10px] gap-[4px] rounded-[24px] inline-flex items-center">
+          <div className="h-[24px] px-[5px] gap-[4px] rounded-[24px] inline-flex items-center">
             <span className="shrink-0 size-[6px] bg-[#9DC082] rounded-full"></span>
             <span className="text-nowrap text-[12px] text-[#1D212C]">Active 28</span>
           </div>
-          <div className="h-[24px] px-[10px] gap-[4px] rounded-[24px] inline-flex items-center">
+          <div className="h-[24px] px-[5px] gap-[4px] rounded-[24px] inline-flex items-center">
             <span className="shrink-0 size-[6px] bg-[#1D212C] rounded-full"></span>
             <span className="text-nowrap text-[12px] text-[#1D212C]">Invited 1</span>
           </div>
-          <div className="h-[24px] px-[10px] gap-[4px] rounded-[24px] inline-flex items-center">
+          <div className="h-[24px] px-[5px] gap-[4px] rounded-[24px] inline-flex items-center">
             <span className="shrink-0 size-[6px] bg-[#989EAD] rounded-full"></span>
             <span className="text-nowrap text-[12px] text-[#989EAD]">Inactive 4</span>
           </div>
@@ -135,7 +140,10 @@ export const EmployeeListPage = () => {
         </section>
 
         <section className="mt-[20px]">
-          <EmployeeListTableView />
+          <div className="hidden">
+            <EmployeeListTableView employeeList={employeeList} />
+          </div>
+          <EmployeeListCardView employeeList={employeeList} />
         </section>
       </div>
     </PageLayout>

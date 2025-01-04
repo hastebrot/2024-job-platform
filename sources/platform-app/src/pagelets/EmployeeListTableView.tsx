@@ -1,8 +1,12 @@
 import { classNames } from "../helpers/clsx";
+import { Employee } from "../helpers/faker";
 import { icons } from "../helpers/lucide";
-import { range } from "../helpers/utils";
 
-export const EmployeeListTableView = () => {
+export type EmployeeListTableView = {
+  employeeList: Employee[];
+};
+
+export const EmployeeListTableView = (props: EmployeeListTableView) => {
   return (
     <div className="mt-[20px]">
       <Table>
@@ -34,47 +38,51 @@ export const EmployeeListTableView = () => {
           </tr>
         </thead>
         <tbody>
-          {range(1, 11).map((index) => (
+          {props.employeeList.map((employee, index) => (
             <tr key={index} className="h-[48px] bg-[#FFFFFF]">
               <TableCell>
-                <span className="text-nowrap">#EMP{index}</span>
+                <span className="text-nowrap">#{employee.number}</span>
               </TableCell>
               <TableCell>
                 <span className="text-nowrap border-b border-[#EAEBEE] pb-[1px]">
-                  Firstname Lastname
+                  {employee.name}
                 </span>
               </TableCell>
               <TableCell>
-                <span className="text-nowrap">Project Manager</span>
+                <span className="text-nowrap">{employee.role}</span>
               </TableCell>
               <TableCell>
-                <span className="text-nowrap truncate">Human Resources</span>
+                <span className="text-nowrap truncate">{employee.department}</span>
               </TableCell>
               <TableCell>
-                {
-                  [
+                <div>
+                  {employee.status === "active" && (
                     <div className="h-[24px] px-[10px] gap-[4px] rounded-[24px] inline-flex items-center bg-[#9DC082] text-[#FFFFFF]">
                       <span className="shrink-0 size-[6px] bg-[#FFFFFF] rounded-full"></span>
                       <span className="text-nowrap text-[12px]">Active</span>
-                    </div>,
+                    </div>
+                  )}
+                  {employee.status === "invited" && (
                     <div className="h-[24px] px-[10px] gap-[4px] rounded-[24px] inline-flex items-center bg-[#1D212C] text-[#FFFFFF]">
                       <span className="shrink-0 size-[6px] bg-[#FFFFFF] rounded-full"></span>
                       <span className="text-nowrap text-[12px]">Invited</span>
-                    </div>,
+                    </div>
+                  )}
+                  {employee.status === "inactive" && (
                     <div className="h-[24px] px-[10px] gap-[4px] rounded-[24px] inline-flex items-center bg-[#B7BBC6] text-[#FFFFFF]">
                       <span className="shrink-0 size-[6px] bg-[#FFFFFF] rounded-full"></span>
                       <span className="text-nowrap text-[12px]">Inactive</span>
-                    </div>,
-                  ][Math.floor(3 * Math.random())]
-                }
+                    </div>
+                  )}
+                </div>
               </TableCell>
               <TableCell>
                 <span className="text-nowrap border border-[#DFE1E5] text-[#1777BD] rounded-full px-[8px] h-[18px]">
-                  username@mail.com
+                  {employee.contactEmail}
                 </span>
               </TableCell>
               <TableCell>
-                <span className="text-nowrap">01 Feb, 2003</span>
+                <span className="text-nowrap">{employee.joinedDate}</span>
               </TableCell>
               <TableCell>
                 <icons.Ellipsis className="text-[#989EAD]" size={18} />

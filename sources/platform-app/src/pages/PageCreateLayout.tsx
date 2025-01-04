@@ -86,11 +86,11 @@ const Footer = () => {
   );
 };
 
-export type ViewportProps = {
+type ViewportProps = {
   children?: React.ReactNode;
 };
 
-export const Viewport = (props: ViewportProps) => {
+const Viewport = (props: ViewportProps) => {
   return (
     <div className="grid relative overflow-auto">
       <div className="grid absolute inset-0">{props.children}</div>
