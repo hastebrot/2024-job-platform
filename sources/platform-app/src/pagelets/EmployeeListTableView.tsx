@@ -2,11 +2,11 @@ import { classNames } from "../helpers/clsx";
 import { Employee } from "../helpers/faker";
 import { icons } from "../helpers/lucide";
 
-export type EmployeeListTableView = {
+export type EmployeeListTableViewProps = {
   employeeList: Employee[];
 };
 
-export const EmployeeListTableView = (props: EmployeeListTableView) => {
+export const EmployeeListTableView = (props: EmployeeListTableViewProps) => {
   return (
     <div className="mt-[20px]">
       <Table>
