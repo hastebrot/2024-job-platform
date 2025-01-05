@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { Employee, randomEmployee } from "../helpers/faker";
 import { icons } from "../helpers/lucide";
 import { range } from "../helpers/utils";
+import { PageLayout } from "../layouts/PageLayout";
 import { EmployeeListCardView } from "../pagelets/EmployeeListCardView";
 import { EmployeeListTableView } from "../pagelets/EmployeeListTableView";
-import { PageLayout } from "./PageLayout";
+
+type ViewOptions = "table" | "card";
 
 export const EmployeeListPage = () => {
   const headerLeft = (
@@ -38,6 +40,7 @@ export const EmployeeListPage = () => {
       </div>
     </div>
   );
+  const selectedView = "card" as ViewOptions;
   const [employeeList, setEmployeeList] = useState<Employee[]>([]);
   useEffect(() => {
     const employeeList = range(0, 10).map(() => {
@@ -140,10 +143,8 @@ export const EmployeeListPage = () => {
         </section>
 
         <section className="mt-[20px]">
-          <div className="hidden">
-            <EmployeeListTableView employeeList={employeeList} />
-          </div>
-          <EmployeeListCardView employeeList={employeeList} />
+          {selectedView === "table" && <EmployeeListTableView employeeList={employeeList} />}
+          {selectedView === "card" && <EmployeeListCardView employeeList={employeeList} />}
         </section>
       </div>
     </PageLayout>
